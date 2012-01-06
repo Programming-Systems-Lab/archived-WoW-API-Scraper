@@ -1,0 +1,31 @@
+You've found my World of Warcraft Community API data scraper! I built this set of
+tools to assist in my research on player usage of World of Warcraft. Contained in
+this repository is a data scraper that scales to over 60 nodes, achieving (on my
+hardware), a throughput maxing out at about 1 million characters per day (with
+complete achievement, quest, raid, etc history). It is designed to be multi-phase:
+first it loads in a list of guilds from a third party (e.g. WowProgress.com), then
+it retrieves a list of characters in those guilds from Blizzard, then it queries
+Blizzard for each character's information.
+
+For more information on these projects, please see our technical report, 
+"A Large-Scale, Longitudinal Study of Player Achievements in World of Warcraft",
+available at http://mice.cs.columbia.edu/getTechreport.php?techreportID=1496&format=pdf&
+
+
+This project is being distributed more-or-less "as-is": while the authors are more 
+than happy to help you get started with it, this should not be taken to mean that 
+it is supported :)
+
+I am also more than happy to share anonymized data that I previously collected
+from Fall of 2011.
+
+Note: Blizzard has recently posted new usage guidelines for their API in their
+community forums, at http://us.battle.net/wow/en/forum/topic/3746635131 which
+clarify somewhat the policy regarding accessing the API from multiple hosts
+(which is the purpose of this application). Use at your own risk, and most importantly,
+be sure to not negatively impact others use of the Blizzard API. YMMV.
+
+Happy Data Mining,
+
+Jonathan Bell
+jbell@cs.columbia.edu

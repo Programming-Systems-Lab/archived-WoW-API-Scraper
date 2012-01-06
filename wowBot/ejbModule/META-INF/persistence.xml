@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+     <persistence-unit name="halo_persist">
+
+         <jta-data-source>jdbc/wowScraping</jta-data-source>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Achievement</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.AchievementProgress</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Guild</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Item</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Quest</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Raid</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.RaidBoss</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.RaidBossProgress</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Toon</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.ReputationSink</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.ReputationStanding</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Server</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Slave</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Spell</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.RaidProgress</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Title</class>
+                  <class>edu.columbia.cs.psl.scrape.wow.entity.Profession</class>
+         <class>edu.columbia.cs.psl.scrape.wow.entity.Toon</class>
+
+         <properties>
+           <!--Use the java2db feature -->
+           <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+        <property name="eclipselink.ddl-generation" value="create-tables"/>
+        <property name="eclipselink.create-ddl-jdbc-file-name" value="create.sql"/>
+        <property name="eclipselink.ddl-generation.output-mode" value="sql-script" />
+        <property name="eclipselink.ddl-generation.table-creation-suffix" value=" engine=InnoDB;" />
+  	    <property name="eclipselink.application-location" value="C:/Users/jon/git/wow-scrape/"/>
+           </properties>
+     </persistence-unit>
+</persistence> 
